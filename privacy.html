@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité – Sentier</title>
+<style>
+  :root { --fg:#1d2a20; --bg:#fbfaf6; --accent:#2f6b3f; --muted:#5b6a5f; --line:#dfe5da; }
+  @media (prefers-color-scheme: dark) { :root { --fg:#e6ece6; --bg:#141a16; --accent:#7fc58f; --muted:#9fb0a4; --line:#2b3730; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:2rem; margin:0 0 4px; color:var(--accent); }
+  h2 { font-size:1.25rem; margin:2.2em 0 .5em; padding-top:.6em; border-top:1px solid var(--line); }
+  .meta { color:var(--muted); margin:0 0 1.5em; }
+  table { border-collapse:collapse; width:100%; font-size:.95rem; display:block; overflow-x:auto; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border:1px solid var(--line); }
+  th { background:rgba(127,127,127,.1); }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>Politique de confidentialité</h1>
+<p class="meta">Application Android « Sentier » (<code>com.orion.sentier</code>) · Dernière mise à jour : 1er octobre 2026</p>
+
+<p>Sentier est une application de randonnée : elle permet de découvrir des itinéraires, de consulter une carte, d'enregistrer ses sorties, d'importer et d'exporter des traces GPX, et, si vous le souhaitez, de publier des avis. Cette politique explique quelles données sont traitées, pourquoi, avec qui elles sont partagées et quels sont vos droits.</p>
+
+<p><strong>En résumé :</strong> l'application fonctionne sans compte. Votre position et vos traces GPS restent sur votre appareil. Aucune publicité, aucun suivi publicitaire, aucune vente de données. Les rapports de plantage et les statistiques d'usage sont désactivés tant que vous ne les activez pas.</p>
+
+<h2>1. Responsable du traitement</h2>
+<p>Sentier est édité à titre individuel. Pour toute question ou demande relative à vos données : <a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a>.</p>
+
+<h2>2. Données qui restent sur votre appareil</h2>
+<p>Les données suivantes sont stockées uniquement sur votre téléphone et ne sont jamais envoyées à nos serveurs :</p>
+<ul>
+  <li><strong>Position (GPS)</strong> : utilisée, après votre autorisation, pour centrer la carte sur vous et pour enregistrer une sortie lorsque vous lancez « Suivre ». L'enregistrement s'effectue dans un service au premier plan, avec une notification visible. Vous pouvez retirer l'autorisation à tout moment dans les réglages Android.</li>
+  <li><strong>Activités enregistrées et traces GPX importées</strong> (tracé, dates, distance, dénivelé).</li>
+  <li><strong>Favoris, randonnées téléchargées hors ligne, filtres et préférences</strong>, tant que vous n'êtes pas connecté à un compte.</li>
+</ul>
+<p>Les fichiers GPX sont lus et écrits via le sélecteur de fichiers Android : l'application n'a pas d'accès général à votre stockage.</p>
+
+<h2>3. Compte communautaire (facultatif)</h2>
+<p>Un compte n'est nécessaire que pour publier des avis et synchroniser vos favoris. Si vous en créez un, les données suivantes sont stockées sur un serveur (service d'hébergement Supabase : base de données PostgreSQL et authentification) :</p>
+<ul>
+  <li>votre adresse e-mail et votre mot de passe (le mot de passe est stocké sous forme hachée par le service d'authentification ; nous n'y avons pas accès en clair) ;</li>
+  <li>votre nom affiché et, si vous en ajoutez une, votre photo de profil ;</li>
+  <li>vos avis (note, texte, date) et les photos jointes ;</li>
+  <li>vos favoris synchronisés ;</li>
+  <li>les signalements d'avis que vous effectuez.</li>
+</ul>
+<p>Votre <strong>nom affiché, votre photo de profil, vos avis et leurs photos sont visibles publiquement</strong> dans l'application. Évitez d'utiliser votre nom complet si vous souhaitez rester discret. Votre adresse e-mail n'est jamais affichée aux autres utilisateurs.</p>
+<p><strong>Photos :</strong> les photos publiées sont hébergées par Cloudinary. Les métadonnées de localisation (EXIF) sont supprimées avant l'envoi. Votre position n'est jamais transmise avec un avis.</p>
+<p><strong>Sessions :</strong> les jetons de connexion sont stockés chiffrés sur l'appareil (clé liée au matériel via Android Keystore) et ne sont pas inclus dans les sauvegardes Android.</p>
+<p><strong>E-mails :</strong> nous vous envoyons uniquement des messages techniques liés au compte (code de confirmation, réinitialisation du mot de passe).</p>
+
+<h2>4. Rapports de plantage et statistiques d'usage (facultatif, désactivés par défaut)</h2>
+<p>Dans <em>Paramètres › Confidentialité</em>, vous pouvez activer deux options, chacune indépendante et désactivée tant que vous ne l'activez pas :</p>
+<ul>
+  <li><strong>Rapports de plantage (Firebase Crashlytics, Google)</strong> : informations techniques en cas de plantage (modèle d'appareil, version d'Android et de l'application, trace de l'erreur, identifiant d'installation Firebase). Aucune position ni donnée de compte.</li>
+  <li><strong>Statistiques d'usage (Firebase Analytics, Google)</strong> : mesure anonyme des écrans consultés et de l'utilisation des fonctions, associée à un identifiant d'installation Firebase.</li>
+</ul>
+<p>L'identifiant publicitaire Android (AD ID) n'est ni demandé ni utilisé, et la personnalisation publicitaire est désactivée. Vous pouvez désactiver ces options à tout moment ; la collecte s'arrête alors.</p>
+
+<h2>5. Services tiers contactés par l'application</h2>
+<p>Pour fonctionner, l'application effectue des requêtes réseau (en HTTPS uniquement) vers les services suivants. Ces services reçoivent techniquement votre adresse IP et les informations habituelles d'une requête web (appareil, version de l'application).</p>
+<table>
+<tr><th>Service</th><th>Finalité</th><th>Données transmises</th></tr>
+<tr><td>Supabase</td><td>Compte, avis, favoris</td><td>Données du compte décrites au point 3 (uniquement si vous êtes connecté)</td></tr>
+<tr><td>Cloudinary</td><td>Hébergement des photos d'avis et de profil</td><td>Photos que vous publiez (sans métadonnées de localisation)</td></tr>
+<tr><td>Geotrek (Parc national des Écrins) et autres sources d'itinéraires</td><td>Catalogue d'itinéraires</td><td>Requêtes de consultation d'itinéraires</td></tr>
+<tr><td>Waymarked Trails</td><td>Itinéraires et tuiles de sentiers balisés</td><td>Zone de carte affichée (tuiles) et requêtes d'itinéraires</td></tr>
+<tr><td>IGN (Géoplateforme), OpenFreeMap / OpenStreetMap</td><td>Fonds de carte, styles et polices</td><td>Zone de carte affichée (tuiles)</td></tr>
+<tr><td>geo.api.gouv.fr (État français)</td><td>Identifier la commune, le département et la région d'un itinéraire</td><td>Coordonnées d'un point d'itinéraire ou code INSEE ; aucun identifiant de compte</td></tr>
+<tr><td>Google Firebase (Crashlytics, Analytics)</td><td>Rapports de plantage et statistiques</td><td>Voir point 4 (uniquement si vous les activez)</td></tr>
+</table>
+<p>Ces fournisseurs traitent les données selon leurs propres politiques de confidentialité. Certains (notamment Google, Supabase, Cloudinary) peuvent héberger des données en dehors de l'Union européenne ; les transferts s'appuient alors sur les garanties prévues par le RGPD (clauses contractuelles types ou décision d'adéquation).</p>
+<p>Nous ne vendons pas vos données, ne les utilisons pas à des fins publicitaires et ne les partageons pas avec des courtiers en données.</p>
+
+<h2>6. Bases légales (RGPD)</h2>
+<ul>
+  <li><strong>Exécution du service</strong> : compte, avis, favoris, fonctionnement de la carte et du suivi.</li>
+  <li><strong>Consentement</strong> : autorisation de localisation, rapports de plantage, statistiques d'usage, publication de photos. Vous pouvez le retirer à tout moment.</li>
+  <li><strong>Intérêt légitime</strong> : sécurité du service et modération des avis signalés.</li>
+</ul>
+
+<h2>7. Durée de conservation</h2>
+<ul>
+  <li>Données locales : jusqu'à suppression par vos soins ou désinstallation de l'application.</li>
+  <li>Données du compte, avis et photos : jusqu'à la suppression de votre compte ou de l'avis concerné.</li>
+  <li>Données Firebase : selon les durées de conservation de Google ; consultez la documentation Firebase pour le détail.</li>
+</ul>
+
+<h2>8. Vos droits et suppression du compte</h2>
+<p>Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité.</p>
+<ul>
+  <li><strong>Suppression du compte dans l'application</strong> : <em>Profil › Supprimer mon compte</em>. Votre compte, votre profil, vos avis et vos photos publiés sont alors définitivement supprimés. Les données locales restent sur votre appareil jusqu'à ce que vous les supprimiez.</li>
+  <li><strong>Autres demandes</strong> (y compris si vous ne pouvez plus accéder à l'application) : écrivez à <a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a>. Nous répondons dans un délai d'un mois.</li>
+  <li><strong>Réclamation</strong> : vous pouvez saisir la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</li>
+</ul>
+
+<h2>9. Sécurité</h2>
+<p>Toutes les communications réseau utilisent HTTPS (le trafic non chiffré est interdit dans l'application). Les jetons de session sont chiffrés sur l'appareil. Aucune méthode de transmission ou de stockage n'est toutefois totalement infaillible.</p>
+
+<h2>10. Enfants</h2>
+<p>Sentier ne s'adresse pas aux enfants de moins de 15 ans, et nous ne collectons pas sciemment leurs données. Si vous pensez qu'un mineur a créé un compte, contactez-nous pour le faire supprimer.</p>
+
+<h2>11. Données cartographiques</h2>
+<p>Les itinéraires et cartes proviennent de sources ouvertes, notamment © contributeurs <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> (licence ODbL), l'IGN et le Parc national des Écrins (Geotrek). Ces sources sont mentionnées dans l'écran « À propos et sources des données ».</p>
+
+<h2>12. Modifications</h2>
+<p>Cette politique peut évoluer. La date de dernière mise à jour figure en haut de cette page ; en cas de changement important, nous vous en informerons dans l'application.</p>
+
+<h2>13. Contact</h2>
+<p><a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a></p>
+</main>
+</body>
+</html>
