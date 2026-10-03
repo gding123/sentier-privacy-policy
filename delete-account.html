@@ -1,45 +1,14 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-title-fr="Supprimer votre compte – Sentier" data-title-en="Delete your account – Sentier">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Supprimer votre compte / Delete your account – Sentier</title>
 <meta name="description" content="Comment supprimer votre compte Sentier et vos données. / How to delete your Sentier account and your data.">
-<script>
-  // Pick the language before first paint: ?lang= > saved choice > browser language.
-  (function () {
-    var lang = null;
-    try { lang = new URLSearchParams(location.search).get('lang'); } catch (e) {}
-    if (lang !== 'fr' && lang !== 'en') {
-      try { lang = localStorage.getItem('sentier-lang'); } catch (e) {}
-    }
-    if (lang !== 'fr' && lang !== 'en') {
-      lang = /^fr\b/i.test(navigator.language || '') ? 'fr' : 'en';
-    }
-    document.documentElement.lang = lang;
-    document.documentElement.setAttribute('data-lang', lang);
-  })();
-</script>
+<script src="lang.js"></script>
+<link rel="stylesheet" href="style.css">
 <style>
-  :root { --fg:#1d2a20; --bg:#fbfaf6; --accent:#2f6b3f; --accent-fg:#fff; --muted:#5b6a5f; --line:#dfe5da; --ok:#2f6b3f; --err:#b3261e; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#e6ece6; --bg:#141a16; --accent:#7fc58f; --accent-fg:#10261a; --muted:#9fb0a4; --line:#2b3730; --ok:#7fc58f; --err:#f2b8b5; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  h1 { font-size:2rem; margin:0 0 4px; color:var(--accent); }
-  h2 { font-size:1.25rem; margin:2.2em 0 .5em; padding-top:.6em; border-top:1px solid var(--line); }
-  .meta { color:var(--muted); margin:0 0 1.5em; }
-  a { color:var(--accent); }
   .callout { border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:6px; padding:4px 16px; background:rgba(127,127,127,.06); }
-  .note { color:var(--muted); font-size:.9rem; }
-
-  /* Language switch: shown only when JavaScript is available (otherwise both languages are displayed). */
-  html[data-lang="fr"] section[lang="en"], html[data-lang="en"] section[lang="fr"] { display:none; }
-  html:not([data-lang]) section[lang="en"] { margin-top:4em; padding-top:2em; border-top:3px solid var(--line); }
-  .lang-switch { display:none; justify-content:flex-end; gap:6px; margin:0 0 12px; }
-  html[data-lang] .lang-switch { display:flex; }
-  .lang-switch button { font:inherit; font-size:.9rem; padding:4px 12px; border:1px solid var(--line); border-radius:999px; background:transparent; color:var(--fg); cursor:pointer; }
-  .lang-switch button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:var(--accent-fg); font-weight:600; }
-  .lang-switch button:focus-visible, input:focus-visible, .submit:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
 
   /* Deletion request form */
   form { margin:1.2em 0 0; }
@@ -48,12 +17,12 @@
   input[type=email] { flex:1 1 260px; min-width:0; font:inherit; padding:10px 12px; border:1px solid var(--muted); border-radius:6px; background:var(--bg); color:var(--fg); }
   .submit { font:inherit; font-weight:600; padding:10px 18px; border:0; border-radius:6px; background:var(--accent); color:var(--accent-fg); cursor:pointer; }
   .submit:disabled { opacity:.6; cursor:progress; }
+  input:focus-visible, .submit:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
   .hp { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
   .status p { margin:12px 0 0; font-weight:600; }
   .status .ok { color:var(--ok); }
   .status .err { color:var(--err); }
   .status .busy { color:var(--muted); font-weight:400; }
-  [hidden] { display:none !important; }
 </style>
 </head>
 <body>
@@ -112,7 +81,7 @@
 <p class="note">Pour éviter qu'une personne demande la suppression du compte d'autrui, nous pouvons vous répondre à cette adresse pour vérifier que la demande vient bien de vous avant de supprimer le compte. Réponse sous un mois au plus.</p>
 
 <h2>4. Données et contact</h2>
-<p>L'adresse e-mail saisie dans le formulaire sert uniquement à traiter votre demande. Elle est acheminée par le service de formulaire FormSubmit (formsubmit.co) jusqu'à notre boîte e-mail. Pour plus d'informations, consultez la <a href="privacy.html">politique de confidentialité</a>. Vous pouvez aussi écrire directement à <a href="mailto:orion.extensions@gmail.com">orion.extensions@gmail.com</a>.</p>
+<p>L'adresse e-mail saisie dans le formulaire sert uniquement à traiter votre demande. Elle est acheminée par le service de formulaire FormSubmit (formsubmit.co) jusqu'à notre boîte e-mail. Pour plus d'informations, consultez la <a href="privacy.html" data-page="privacy.html">politique de confidentialité</a>. Vous pouvez aussi écrire directement à <a href="mailto:orion.extensions@gmail.com">orion.extensions@gmail.com</a>.</p>
 </section>
 
 <!-- ============================== ENGLISH ============================== -->
@@ -163,37 +132,13 @@
 <p class="note">To prevent someone from requesting the deletion of another person's account, we may reply to this address to check that the request really comes from you before deleting the account. We will answer within one month at most.</p>
 
 <h2>4. Data and contact</h2>
-<p>The e-mail address you enter in the form is used only to process your request. It is relayed to our mailbox by the FormSubmit form service (formsubmit.co). For more information, see the <a href="privacy.html">privacy policy</a> (in French). You can also write directly to <a href="mailto:orion.extensions@gmail.com">orion.extensions@gmail.com</a>.</p>
+<p>The e-mail address you enter in the form is used only to process your request. It is relayed to our mailbox by the FormSubmit form service (formsubmit.co). For more information, see the <a href="privacy.html" data-page="privacy.html">privacy policy</a>. You can also write directly to <a href="mailto:orion.extensions@gmail.com">orion.extensions@gmail.com</a>.</p>
 </section>
 
 </main>
 
 <script>
 (function () {
-  var root = document.documentElement;
-  var TITLES = {
-    fr: 'Supprimer votre compte – Sentier',
-    en: 'Delete your account – Sentier'
-  };
-
-  function setLang(lang) {
-    root.lang = lang;
-    root.setAttribute('data-lang', lang);
-    document.title = TITLES[lang];
-    document.querySelectorAll('[data-set-lang]').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === lang));
-    });
-  }
-
-  document.querySelectorAll('[data-set-lang]').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var lang = b.getAttribute('data-set-lang');
-      setLang(lang);
-      try { localStorage.setItem('sentier-lang', lang); } catch (e) {}
-    });
-  });
-  setLang(root.getAttribute('data-lang'));
-
   // Send each request in the background so the visitor stays on this page. Without JavaScript the
   // form posts directly to FormSubmit, which shows its own confirmation page.
   document.querySelectorAll('form.deletion-form').forEach(function (form) {
@@ -229,10 +174,11 @@
             form.reset();
             show('ok');
           } else {
+            console.error('FormSubmit refused the request:', result.data);
             show('err');
           }
         })
-        .catch(function () { show('err'); })
+        .catch(function (error) { console.error('FormSubmit request failed:', error); show('err'); })
         .then(function () { button.disabled = false; });
     });
   });

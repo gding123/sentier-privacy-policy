@@ -1,25 +1,22 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-title-fr="Politique de confidentialité – Sentier" data-title-en="Privacy Policy – Sentier">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Politique de confidentialité – Sentier</title>
-<style>
-  :root { --fg:#1d2a20; --bg:#fbfaf6; --accent:#2f6b3f; --muted:#5b6a5f; --line:#dfe5da; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#e6ece6; --bg:#141a16; --accent:#7fc58f; --muted:#9fb0a4; --line:#2b3730; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  h1 { font-size:2rem; margin:0 0 4px; color:var(--accent); }
-  h2 { font-size:1.25rem; margin:2.2em 0 .5em; padding-top:.6em; border-top:1px solid var(--line); }
-  .meta { color:var(--muted); margin:0 0 1.5em; }
-  table { border-collapse:collapse; width:100%; font-size:.95rem; display:block; overflow-x:auto; }
-  th, td { text-align:left; vertical-align:top; padding:8px 10px; border:1px solid var(--line); }
-  th { background:rgba(127,127,127,.1); }
-  a { color:var(--accent); }
-</style>
+<title>Politique de confidentialité / Privacy Policy – Sentier</title>
+<script src="lang.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
+
+<div class="lang-switch" role="group" aria-label="Langue / Language">
+  <button type="button" data-set-lang="fr" aria-pressed="false">Français</button>
+  <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+</div>
+
+<!-- ============================== FRANÇAIS ============================== -->
+<section lang="fr">
 <h1>Politique de confidentialité</h1>
 <p class="meta">Application Android « Sentier » (<code>com.orion.sentier</code>) · Dernière mise à jour : 1er octobre 2026</p>
 
@@ -94,7 +91,7 @@
 <p>Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité.</p>
 <ul>
   <li><strong>Suppression du compte dans l'application</strong> : <em>Profil › Supprimer mon compte</em>. Votre compte, votre profil, vos avis et vos photos publiés sont alors définitivement supprimés. Les données locales restent sur votre appareil jusqu'à ce que vous les supprimiez.</li>
-  <li><strong>Autres demandes</strong> (y compris si vous ne pouvez plus accéder à l'application) : utilisez la <a href="delete-account.html">page de demande de suppression de compte</a> ou écrivez à <a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a>. Nous répondons dans un délai d'un mois.</li>
+  <li><strong>Autres demandes</strong> (y compris si vous ne pouvez plus accéder à l'application) : utilisez la <a href="delete-account.html" data-page="delete-account.html">page de demande de suppression de compte</a> ou écrivez à <a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a>. Nous répondons dans un délai d'un mois.</li>
   <li><strong>Réclamation</strong> : vous pouvez saisir la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</li>
 </ul>
 
@@ -112,6 +109,104 @@
 
 <h2>13. Contact</h2>
 <p><a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a></p>
+</section>
+
+<!-- ============================== ENGLISH ============================== -->
+<section lang="en">
+<h1>Privacy Policy</h1>
+<p class="meta">Android app “Sentier” (<code>com.orion.sentier</code>) · Last updated: October 1, 2026</p>
+
+<p>Sentier is a hiking app: it lets you discover routes, view a map, record your outings, import and export GPX tracks and, if you wish, publish reviews. This policy explains what data is processed, why, who it is shared with and what your rights are.</p>
+
+<p><strong>In short:</strong> the app works without an account. Your location and GPS tracks stay on your device. No ads, no advertising tracking, no sale of data. Crash reports and usage statistics are turned off until you turn them on.</p>
+
+<h2>1. Data controller</h2>
+<p>Sentier is published by an individual. For any question or request about your data: <a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a>.</p>
+
+<h2>2. Data that stays on your device</h2>
+<p>The following data is stored only on your phone and is never sent to our servers:</p>
+<ul>
+  <li><strong>Location (GPS)</strong>: used, with your permission, to center the map on you and to record an outing when you tap “Follow”. Recording runs in a foreground service, with a visible notification. You can withdraw the permission at any time in the Android settings.</li>
+  <li><strong>Recorded activities and imported GPX tracks</strong> (route, dates, distance, elevation gain).</li>
+  <li><strong>Favorites, hikes downloaded for offline use, filters and preferences</strong>, as long as you are not signed in to an account.</li>
+</ul>
+<p>GPX files are read and written through the Android file picker: the app has no general access to your storage.</p>
+
+<h2>3. Community account (optional)</h2>
+<p>An account is only needed to publish reviews and sync your favorites. If you create one, the following data is stored on a server (hosting service Supabase: PostgreSQL database and authentication):</p>
+<ul>
+  <li>your e-mail address and password (the password is stored hashed by the authentication service; we have no access to it in clear text);</li>
+  <li>your display name and, if you add one, your profile photo;</li>
+  <li>your reviews (rating, text, date) and the attached photos;</li>
+  <li>your synced favorites;</li>
+  <li>the review reports you submit.</li>
+</ul>
+<p>Your <strong>display name, profile photo, reviews and their photos are publicly visible</strong> in the app. Avoid using your full name if you want to remain discreet. Your e-mail address is never shown to other users.</p>
+<p><strong>Photos:</strong> published photos are hosted by Cloudinary. Location metadata (EXIF) is removed before upload. Your location is never sent with a review.</p>
+<p><strong>Sessions:</strong> sign-in tokens are stored encrypted on the device (key bound to the hardware through the Android Keystore) and are not included in Android backups.</p>
+<p><strong>E-mails:</strong> we only send you technical messages related to the account (confirmation code, password reset).</p>
+
+<h2>4. Crash reports and usage statistics (optional, off by default)</h2>
+<p>In <em>Settings › Privacy</em>, you can turn on two options, each independent and off until you turn it on:</p>
+<ul>
+  <li><strong>Crash reports (Firebase Crashlytics, Google)</strong>: technical information when the app crashes (device model, Android and app version, error trace, Firebase installation ID). No location or account data.</li>
+  <li><strong>Usage statistics (Firebase Analytics, Google)</strong>: anonymous measurement of the screens viewed and of how features are used, associated with a Firebase installation ID.</li>
+</ul>
+<p>The Android advertising ID (AD ID) is neither requested nor used, and ad personalization is disabled. You can turn these options off at any time; collection then stops.</p>
+
+<h2>5. Third-party services contacted by the app</h2>
+<p>To work, the app makes network requests (HTTPS only) to the following services. These services technically receive your IP address and the usual information of a web request (device, app version).</p>
+<table>
+<tr><th>Service</th><th>Purpose</th><th>Data sent</th></tr>
+<tr><td>Supabase</td><td>Account, reviews, favorites</td><td>Account data described in section 3 (only if you are signed in)</td></tr>
+<tr><td>Cloudinary</td><td>Hosting of review and profile photos</td><td>Photos you publish (without location metadata)</td></tr>
+<tr><td>Geotrek (Écrins National Park) and other route sources</td><td>Route catalog</td><td>Requests to browse routes</td></tr>
+<tr><td>Waymarked Trails</td><td>Marked trail routes and tiles</td><td>Displayed map area (tiles) and route requests</td></tr>
+<tr><td>IGN (Géoplateforme), OpenFreeMap / OpenStreetMap</td><td>Base maps, styles and fonts</td><td>Displayed map area (tiles)</td></tr>
+<tr><td>geo.api.gouv.fr (French State)</td><td>Identify the municipality, département and region of a route</td><td>Coordinates of a route point or INSEE code; no account identifier</td></tr>
+<tr><td>Google Firebase (Crashlytics, Analytics)</td><td>Crash reports and statistics</td><td>See section 4 (only if you turn them on)</td></tr>
+</table>
+<p>These providers process data under their own privacy policies. Some (notably Google, Supabase, Cloudinary) may host data outside the European Union; transfers then rely on the safeguards provided for by the GDPR (standard contractual clauses or an adequacy decision).</p>
+<p>We do not sell your data, do not use it for advertising purposes and do not share it with data brokers.</p>
+
+<h2>6. Legal bases (GDPR)</h2>
+<ul>
+  <li><strong>Performance of the service</strong>: account, reviews, favorites, operation of the map and of recording.</li>
+  <li><strong>Consent</strong>: location permission, crash reports, usage statistics, publication of photos. You can withdraw it at any time.</li>
+  <li><strong>Legitimate interest</strong>: security of the service and moderation of reported reviews.</li>
+</ul>
+
+<h2>7. Retention</h2>
+<ul>
+  <li>Local data: until you delete it or uninstall the app.</li>
+  <li>Account data, reviews and photos: until your account or the review concerned is deleted.</li>
+  <li>Firebase data: according to Google's retention periods; see the Firebase documentation for details.</li>
+</ul>
+
+<h2>8. Your rights and account deletion</h2>
+<p>Under the GDPR, you have the rights of access, rectification, erasure, objection, restriction and portability.</p>
+<ul>
+  <li><strong>Deleting your account in the app</strong>: <em>Profile › Delete my account</em>. Your account, your profile, and the reviews and photos you published are then permanently deleted. Local data stays on your device until you delete it.</li>
+  <li><strong>Other requests</strong> (including if you can no longer access the app): use the <a href="delete-account.html" data-page="delete-account.html">account deletion request page</a> or write to <a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a>. We reply within one month.</li>
+  <li><strong>Complaint</strong>: you can contact the CNIL, the French data protection authority (<a href="https://www.cnil.fr">www.cnil.fr</a>).</li>
+</ul>
+
+<h2>9. Security</h2>
+<p>All network communications use HTTPS (unencrypted traffic is blocked in the app). Session tokens are encrypted on the device. However, no method of transmission or storage is completely infallible.</p>
+
+<h2>10. Children</h2>
+<p>Sentier is not intended for children under 15, and we do not knowingly collect their data. If you believe a minor has created an account, contact us to have it deleted.</p>
+
+<h2>11. Map data</h2>
+<p>Routes and maps come from open sources, notably © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL license), IGN and the Écrins National Park (Geotrek). These sources are listed in the “About and data sources” screen.</p>
+
+<h2>12. Changes</h2>
+<p>This policy may change. The date of the last update is shown at the top of this page; in case of an important change, we will inform you in the app.</p>
+
+<h2>13. Contact</h2>
+<p><a href="mailto:orionextensions@gmail.com">orionextensions@gmail.com</a></p>
+</section>
+
 </main>
 </body>
 </html>
